@@ -1,12 +1,13 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.163.0/containers/alpine
 {
-	"name": "Alpine",
+	"name": "Node",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": { "VARIANT": "14" }
+		
 	},
-	
+	"runArgs": ["--env-file", ".devcontainer.env", "--shm-size", "256m"],
 	// Set *default* container specific settings.json values on container create. 
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
