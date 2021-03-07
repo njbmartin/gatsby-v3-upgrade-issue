@@ -1,12 +1,5 @@
-# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.163.0/containers/alpine/.devcontainer/base.Dockerfile
+# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.140.1/containers/typescript-node/.devcontainer/base.Dockerfile
 
-# [Choice] Alpine version: 3.13, 3.12, 3.11, 3.10
-ARG VARIANT="3.13"
-FROM mcr.microsoft.com/vscode/devcontainers/base:0-alpine-${VARIANT}
-
-# ** [Optional] Uncomment this section to install additional packages. **
-# RUN apk update \
-#     && apk add --no-cache <your-package-list-here>
-RUN apk update
-
-RUN apk add --no-cache nodejs yarn npm
+# [Choice] Node.js version: 14, 12, 10
+ARG VARIANT="14-buster"
+FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:${VARIANT}
