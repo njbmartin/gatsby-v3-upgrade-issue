@@ -26,6 +26,13 @@ The only outdated package is Gatsby, the rest are on their respective latest ver
 3. Now upgrade gatsby to v3.
 4. Run `gatsby develop`. It errors with `NormalModuleFactory.afterResolve (ReactRefreshPlugin) is no longer a waterfall hook`
 
+Tested both NPM and Yarn. Same issue.
+
+OS: Linux 5a9d7cf33ad4 4.19.104-microsoft-standard #1 SMP Wed Feb 19 06:37:35 UTC 2020 x86_64 GNU/Linux (VS Code Dev Container)
+Node: 14.15.4
+NPM: 6.14.10
+Yarn: 1.22.5
+
 ### Thoughts
 
 It appears to be caused by another package having a dependency on webpack@4, while gatsby has a dependency on webpack@5.
